@@ -1,15 +1,23 @@
 <?php
-class Pessoa{
+require "endereco.php";
+
+class Pessoa extends Endereço{
     public $nome;
     private $cpf;
     private $rg;
     private $data_Nasc;
 
-    public function __construct($nome, $cpf, $rg)
+    public function __construct($nome, $cpf, $rg, $rua, $bairro, $cidade, $estado, $cep, $complemento)
     {
         $this->setNome($nome);
         $this->setCpf($cpf);
         $this->setRg($rg);
+        $this->setRua($rua);
+        $this->setBairro($bairro);
+        $this->setCidade($cidade);
+        $this->setEstado($estado);
+        $this->setCep($cep);
+        $this->setComplemento($complemento);
     }
 
     public function getNome(){
@@ -46,7 +54,7 @@ class Pessoa{
  
 }
 
-$peaple = new Pessoa("Eduardo", "108.777.634.10", "9516867");
+$peaple = new Pessoa("Eduardo", "108.777.634.10", "9516867", "Rua 04", "Curado 1", "Jaboatão dos Guararapes", "PE", "54240-030", "75-C");
 echo $peaple-> getNome();
 echo "<br>";
 echo $peaple-> getCpf();
@@ -56,4 +64,17 @@ echo "<br>";
 $peaple-> setData_Nasc("18/03/2003");
 echo $peaple-> setData_Nasc("18/03/2003");
 echo "<br>";
+echo $peaple-> getRua();
+echo "<br>";
+echo $peaple-> getBairro();
+echo "<br>";
+echo $peaple-> getCidade();
+echo "<br>";
+echo $peaple-> getEstado();
+echo "<br>";
+echo $peaple-> getCep();
+echo "<br>";
+echo $peaple-> getComplemento();
+echo "<br>";
+
 ?>

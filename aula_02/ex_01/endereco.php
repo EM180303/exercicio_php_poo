@@ -7,16 +7,6 @@ class Endereço{
     protected $cep;
     protected $complemento;
 
-    public function __construct($rua, $bairro, $cidade, $estado, $cep, $complemento)
-    {
-        $this->setRua($rua);
-        $this->setBairro($bairro);
-        $this->setCidade($cidade);
-        $this->setEstado($estado);
-        $this->setCep($cep);
-        $this->setComplemento($complemento);
-    }
-
     public function getRua(){
         return $this->rua;
     }
@@ -66,19 +56,5 @@ class Endereço{
     }
  
 }
-
-$lugar = new Endereço("Rua 04", "Curado 1", "Jaboatão dos Guararapes", "PE", "54240-030", "75-C");
-echo $lugar-> getRua();
-echo "<br>";
-echo $lugar-> getBairro();
-echo "<br>";
-echo $lugar-> getCidade();
-echo "<br>";
-echo $lugar-> getEstado();
-echo "<br>";
-echo $lugar-> getCep();
-echo "<br>";
-echo $lugar-> getComplemento();
-echo "<br>";
 
 ?>
