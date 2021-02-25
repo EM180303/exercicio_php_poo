@@ -1,9 +1,16 @@
 <?php
 class Pessoa{
     public $nome;
-    public $cpf;
-    public $rg;
-    public $data_Nasc;
+    private $cpf;
+    private $rg;
+    private $data_Nasc;
+
+    public function __construct($nome, $cpf, $rg)
+    {
+        $this->setNome($nome);
+        $this->setCpf($cpf);
+        $this->setRg($rg);
+    }
 
     public function getNome(){
         return $this->nome;
@@ -39,4 +46,14 @@ class Pessoa{
  
 }
 
+$peaple = new Pessoa("Eduardo", "108.777.634.10", "9516867");
+echo $peaple-> getNome();
+echo "<br>";
+echo $peaple-> getCpf();
+echo "<br>";
+echo $peaple-> getRg();
+echo "<br>";
+$peaple-> setData_Nasc("18/03/2003");
+echo $peaple-> setData_Nasc("18/03/2003");
+echo "<br>";
 ?>
